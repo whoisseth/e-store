@@ -20,18 +20,10 @@ export default {
       of: [{ type: 'url' }],
     },
 
-    //   {
-    //     name: 'image',
-    //     title: 'Image',
-    //     type: 'image',
-    //     options: {
-    //       hotspot: true,
-    //     },
-    //   },
     {
       name: 'description',
       title: 'Description',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'slug',
@@ -42,11 +34,11 @@ export default {
         maxLength: 96,
       },
     },
-
     {
       name: 'category',
       title: 'Category',
-      type: 'string',
+      type: 'reference',
+      to: { type: 'category' },
     },
     {
       name: 'rating',

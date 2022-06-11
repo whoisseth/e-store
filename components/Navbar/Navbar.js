@@ -6,10 +6,10 @@ import { SearchBox } from './../SearchBox/SearchBox'
 
 export default function Navbar() {
   return (
-    <div className="sticky top-0 bg-brand py-2 space-y-2 z-50 shadow-md  ">
+    <div className="sticky top-0 bg-slate-100 py-2 space-y-2 z-50 shadow-md  text-blue-500 ">
       <div className=" flex justify-between items-center  px-4 max-w-6xl mx-auto">
         <div className="flex gap-4 items-center">
-          <Menu />
+          {/* <Menu /> */}
           <Logo />
         </div>
         <SearchBox className="hidden md:flex w-full" />
@@ -23,4 +23,4 @@ export default function Navbar() {
   )
 }
 
-const User = () => <FaUserCheck className="text-white text-2xl" />
+const User = () => <FaUserCheck className=" text-2xl" />

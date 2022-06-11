@@ -24,17 +24,12 @@ export default function Slider() {
     {
       id: '4',
       image:
-        'https://img.freepik.com/free-vector/modern-sale-banner-with-product-description_1361-1259.jpg?t=st=1654889064~exp=1654889664~hmac=11d6c8515d6e09c8999c36f588a6d83704d2dc8a5ca659605b15a117b1d3b6d7&w=1380',
+        'https://img.freepik.com/free-vector/online-beauty-stores-banner-concept-ecommerce-mobile-shopping-internet-vector-cartoon-illustration-cosmetic-salon-interior-online-shop-laptop-screen_107791-4006.jpg?t=st=1654936727~exp=1654937327~hmac=8e9406d690fabef854533f1dafbfc6b16495bde03cf3fd5ade6da76a7dc1e2c5&w=1380',
     },
     {
       id: '5',
       image:
         'https://img.freepik.com/free-vector/banner-holiday-sale-with-store-gift-bag-gifts-location-realistic-style-vector-illustration_548887-118.jpg?t=st=1654889410~exp=1654890010~hmac=fbfc4a5df06d85f4c73a05a5f2e03adc938e8eb8246ac91176a8239597f62afa&w=1380',
-    },
-    {
-      id: '6',
-      image:
-        'https://img.freepik.com/free-vector/sale-banner-with-product-description_1361-1333.jpg?t=st=1654889064~exp=1654889664~hmac=c6e7c182e2a6e12da173c8b4c6e9e26e6d7662abced1c86b7c9905f899cda8c0&w=1380',
     },
   ]
   return (
@@ -65,10 +60,10 @@ export default function Slider() {
   )
 }
 
-const Slide = () => (
-  <Link href={'#'}>
-    <div className="w-full h-52  relative cursor-pointer ">
-      <Image src={DefaultImage} layout="fill" objectFit="cover" />
-    </div>
-  </Link>
-)
+// const Slide = () => (
+//   <Link href={'#'}>
+//     <div className="w-full h-52  relative cursor-pointer ">
+//       <Image src={DefaultImage} layout="fill" objectFit="cover" />
+//     </div>
+//   </Link>
+// )

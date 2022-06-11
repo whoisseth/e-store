@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         'primary-blue': '#2874f0',
         brand: '#FF7D20',
+        // brand: '#3b82f6',
       },
     },
   },

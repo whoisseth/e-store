@@ -23,6 +23,10 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
             rel="stylesheet"
           />
+          <meta
+            name="description"
+            content="India's largest online  e-store for Mobiles, Electronics, Personal Computers and much more. Find the largest collection from all brands at the best prices in India. Payment options - COD, UPI, Credit card, Debit card and  more."
+          />
         </Head>
         <body>
           <Main />

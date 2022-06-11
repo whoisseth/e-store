@@ -1,24 +1,3 @@
-// export default function Footer() {
-//   return (
-//     <div className=" bg-slate-700 justify-between text-white   px-16 py-6 flex ">
-//       {Array.from(Array(3), (index) => index + 1).map(() => (
-//         <FooterSample />
-//       ))}
-//     </div>
-//   )
-// }
-
-// const FooterSample = () => (
-//   <div className="flex flex-col items-center">
-//     <p className=" text-gray-400 uppercase m-3 ">footer</p>
-//     <div className="flex flex-col gap-1">
-//       {Array.from(Array(5), (index) => index + 1).map(() => (
-//         <p className="capitalize font-semibold text-sm">footer</p>
-//       ))}
-//     </div>
-//   </div>
-// )
-
 import Link from 'next/link'
 import { GrTwitter } from 'react-icons/gr'
 import { CgIndieHackers } from 'react-icons/cg'
@@ -49,8 +28,7 @@ export default function Footer() {
       ],
     },
   ]
-  const footerStyle =
-    'hover:opacity-75 cursor-pointer transition transition-all transform hover:scale-105  '
+  const footerStyle = 'hover:opacity-75 cursor-pointer transition transition-all transform hover:scale-105  '
   return (
     <footer className="bg-[#E9E9E9] font-poppins">
       <div className="sm:max-w-6xl mx-auto  px-6 pt-12  pb-12 flex flex-wrap justify-between gap-5 sm:gap-20  sm:pb-24 ">
@@ -61,7 +39,7 @@ export default function Footer() {
             </h2>
             <div className="flex flex-col gap-1 sm:gap-2">
               {links.map((link, index) => (
-                <Link key={index} href='#'>
+                <Link key={index} href={link}>
                   <a className="text-sm class-name sm:text-lg">{link}</a>
                 </Link>
               ))}
@@ -69,7 +47,7 @@ export default function Footer() {
           </div>
         ))}
         <div className=" flex    mx-auto gap-4 flex-col-reverse  sm:flex-col lg:mx-0">
-          <p className="text-sm sm:text-lg ">© 2022 e-store Pvt. Ltd.</p>
+          <p className="text-sm sm:text-lg ">© 2022 Vade Labs Pvt. Ltd.</p>
           <div className="text-black flex gap-3  justify-center sm:text-2xl items-center sm:gap-5  ">
             <GrTwitter className={footerStyle} />
             <BsLinkedin className={`text-sm sm:text-xl ${footerStyle}`} />

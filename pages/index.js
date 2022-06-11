@@ -6,23 +6,25 @@ import DealsOfTheDay from './../components/DealsOfTheDay/DealsOfTheDay'
 import Products from './../components/Products/Products'
 import { HiOutlineMenu } from 'react-icons/hi'
 import Image from 'next/image'
+import ProductCart from './../components/ProductCart'
 
-const Home = ({ products }) => {
+const Home = ({ products, category }) => {
   console.log(products)
+  console.log(category)
 
   return (
     <Layout>
-      <Categories />
+      <Categories category={category} />
       <div className="mx-2">
         <Slider />
-        {/* <DealsOfTheDay /> */}
-        {/* <Products /> */}
-        <div>
+        <div className="max-w-6xl mx-auto px-6 flex flex-wrap gap-4 sm:gap-6 items-center justify-center my-4">
           {products.map((data) => (
-            <div>
-              <div>{data.name}</div>
-              <Image src={data.imageUrl[0]} height={200} width={200} />
-            </div>
+            <ProductCart
+              image={data.imageUrl[0]}
+              name={data.name}
+              price={data.price}
+              slug={`product/${data.slug.current}`}
+            />
           ))}
         </div>
       </div>
@@ -35,9 +37,17 @@ export default Home
 export const getServerSideProps = async () => {
   const query = `*[_type == "product"]`
   const products = await client.fetch(query)
+  //
+  // category
+  const categoryQuery = `*[_type == 'category']{
+    name,
+    imageUrl
+  }`
+  const category = await client.fetch(categoryQuery)
   return {
     props: {
       products,
+      category,
     },
   }
 }
