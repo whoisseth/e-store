@@ -6,7 +6,8 @@ import { SearchBox } from './../SearchBox/SearchBox'
 
 export default function Navbar() {
   return (
-    <div className="sticky top-0 bg-slate-100 py-2 space-y-2 z-50 shadow-md  text-blue-500 ">
+    // text-blue-500
+    <div className="sticky top-0 bg-slate-100 py-2 space-y-2 z-50 shadow-md  text-main-blue  ">
       <div className=" flex justify-between items-center  px-4 max-w-6xl mx-auto">
         <div className="flex gap-4 items-center">
           {/* <Menu /> */}
