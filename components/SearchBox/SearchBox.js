@@ -1,5 +1,9 @@
 import SearchBtn from './../SearchBtn/SearchBtn'
+import { useStore } from '../../zustand/store'
+
 export const SearchBox = ({ className }) => {
+  const { setSearch } = useStore()
+
   return (
     <div
       className={
@@ -9,6 +13,7 @@ export const SearchBox = ({ className }) => {
     >
       <SearchBtn />
       <input
+        onChange={(e) => setSearch(e.target.value)}
         type="text"
         placeholder="Search for Products, Brands and More   "
         className="flex  mb-2 w-full px-2  outline-none  placeholder:text-gray-400 placeholder:text-xs  text-black   my-2 text-sm 
